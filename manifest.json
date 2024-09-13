@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "OpenAI Translation in WPML",
+  "version": "1.0",
+  "description": "Automatically add a OpenAI button to WPML translation page.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.ate.wpml.org/dashboard*"
+      ],
+      "js": [
+        "content.js",
+        "popup.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
