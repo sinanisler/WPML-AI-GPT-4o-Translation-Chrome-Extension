@@ -81,7 +81,7 @@
       body: JSON.stringify({
         model: "gpt-4o",
         messages: [
-          { role: "system", content: "Translate the following text into the desired language. If the text is already in the desired language or too short, return it exactly as-is, without any changes or annotations. Maintain any syntax or HTML tags. Never add language names, comments, or suggestions." },
+          { role: "system", content: "Translate the following text. Keep the syntax or html tags as same if there is any with the translation. if the sentence already translated or too short dont say too short just translate only. dont add anything else and dont give any suggestions ever never. if the original text already in desired language keep it same." },
           { role: "user", content: prompt },
         ],
         temperature: 0,
